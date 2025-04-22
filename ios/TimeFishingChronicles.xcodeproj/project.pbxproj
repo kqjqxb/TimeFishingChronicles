@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-TimeFishingChronicles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TimeFishingChronicles.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		151B86786BE942479151448A /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 758314BCF7334F0FB6A1C361 /* Inter-Bold.ttf */; };
 		1D78803DBB5C2E96395237AC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		242F92B86A2A4206A68745B0 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 790C45DA0034418EB8CC0C9C /* Inter-Medium.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B164A3637D014A198CF371BE /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 094E0360D7E74725BEA860F1 /* Rubik-Italic.ttf */; };
+		B8A2FE7E00FB46AFA8D8C1CB /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40819C5220BE45D399A03D6B /* Inter-Regular.ttf */; };
+		C43A47D2F88440ABB42E605A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6AA8B54F2DF4BADB5B2E9F9 /* Rubik-Regular.ttf */; };
+		CF9A73A0A3E043BBAD23EDF6 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06CB23B3DFFE4F178BC133C7 /* Inter-SemiBold.ttf */; };
+		DA3221F52F9F4BDDA448325F /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C1C7F1DE494418ACEAA8BC /* Inter-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06CB23B3DFFE4F178BC133C7 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../src/assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		094E0360D7E74725BEA860F1 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../src/assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TimeFishingChronicles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFishingChronicles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TimeFishingChronicles/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TimeFishingChronicles/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TimeFishingChronicles/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TimeFishingChronicles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeFishingChronicles.debug.xcconfig"; path = "Target Support Files/Pods-TimeFishingChronicles/Pods-TimeFishingChronicles.debug.xcconfig"; sourceTree = "<group>"; };
+		40819C5220BE45D399A03D6B /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../src/assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TimeFishingChronicles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeFishingChronicles.release.xcconfig"; path = "Target Support Files/Pods-TimeFishingChronicles/Pods-TimeFishingChronicles.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-TimeFishingChronicles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeFishingChronicles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		758314BCF7334F0FB6A1C361 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../src/assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TimeFishingChronicles/AppDelegate.swift; sourceTree = "<group>"; };
+		790C45DA0034418EB8CC0C9C /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../src/assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TimeFishingChronicles/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84C1C7F1DE494418ACEAA8BC /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../src/assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
+		C6AA8B54F2DF4BADB5B2E9F9 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -75,6 +89,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				9A52239675EC4BFA83467326 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -87,6 +102,20 @@
 				13B07F961A680F5B00A75B9A /* TimeFishingChronicles.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9A52239675EC4BFA83467326 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C1C7F1DE494418ACEAA8BC /* Inter-Black.ttf */,
+				758314BCF7334F0FB6A1C361 /* Inter-Bold.ttf */,
+				790C45DA0034418EB8CC0C9C /* Inter-Medium.ttf */,
+				40819C5220BE45D399A03D6B /* Inter-Regular.ttf */,
+				06CB23B3DFFE4F178BC133C7 /* Inter-SemiBold.ttf */,
+				094E0360D7E74725BEA860F1 /* Rubik-Italic.ttf */,
+				C6AA8B54F2DF4BADB5B2E9F9 /* Rubik-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -161,6 +190,13 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				1D78803DBB5C2E96395237AC /* PrivacyInfo.xcprivacy in Resources */,
+				DA3221F52F9F4BDDA448325F /* Inter-Black.ttf in Resources */,
+				151B86786BE942479151448A /* Inter-Bold.ttf in Resources */,
+				242F92B86A2A4206A68745B0 /* Inter-Medium.ttf in Resources */,
+				B8A2FE7E00FB46AFA8D8C1CB /* Inter-Regular.ttf in Resources */,
+				CF9A73A0A3E043BBAD23EDF6 /* Inter-SemiBold.ttf in Resources */,
+				B164A3637D014A198CF371BE /* Rubik-Italic.ttf in Resources */,
+				C43A47D2F88440ABB42E605A /* Rubik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +309,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.timefishingchronicles.app;
 				PRODUCT_NAME = TimeFishingChronicles;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -300,7 +336,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.timefishingchronicles.app;
 				PRODUCT_NAME = TimeFishingChronicles;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +412,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +481,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
