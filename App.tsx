@@ -1,8 +1,8 @@
 import React from 'react';
-import PrideQuestStack from './StackNavigator';
+import TimeChroniclesStack from './StackNavigator';
 
 function App() {
-  return <PrideQuestStack />;
+  return <TimeChroniclesStack />;
 }
 
 export default App;

@@ -38,17 +38,17 @@ const TimeChroniclesOnboardingScreen = () => {
     }
   };
 
-  const callEnRenderItem = ({ item }) => (
+  const timechroniclesItemRender = ({ item }) => (
     <View style={{
-      flex: 1,
+      width: dimensions.width,
       alignItems: 'center',
       height: dimensions.height,
+      flex: 1,
       justifyContent: 'space-between',
-      width: dimensions.width,
     }}>
       <View style={{
-        alignItems: 'center',
         width: dimensions.width,
+        alignItems: 'center',
         alignSelf: 'flex-start',
       }}>
         <Image
@@ -70,14 +70,14 @@ const TimeChroniclesOnboardingScreen = () => {
         }}>
           <Text
             style={{
-              color: '#00286E',
+              paddingHorizontal: dimensions.width * 0.05,
               textAlign: 'center',
               fontSize: dimensions.width * 0.07,
-              maxWidth: dimensions.width * 0.89,
-              alignSelf: 'center',
-              paddingHorizontal: dimensions.width * 0.05,
-              fontFamily: fontRubikRegular,
               fontWeight: 700,
+              alignSelf: 'center',
+              maxWidth: dimensions.width * 0.89,
+              fontFamily: fontRubikRegular,
+              color: '#00286E',
             }}>
             {item.upText}
           </Text>
@@ -141,7 +141,7 @@ const TimeChroniclesOnboardingScreen = () => {
           horizontal
           scrollEventThrottle={32}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={callEnRenderItem}
+          renderItem={timechroniclesItemRender}
           pagingEnabled
           onViewableItemsChanged={viewableItemsChanged}
           ref={timeChroniclesRef}

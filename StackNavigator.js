@@ -12,7 +12,7 @@ import TimeChroniclesOnboardingScreen from './src/screens/TimeChroniclesOnboardi
 
 const Stack = createNativeStackNavigator();
 
-const PrideQuestStack = () => {
+const TimeChroniclesStack = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Provider store={store}>
@@ -27,10 +27,6 @@ const PrideQuestStack = () => {
 };
 
 const AppNavigator = () => {
-
-
-
-
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName={'LoadPrideQuestScreen'}>
@@ -43,4 +39,4 @@ const AppNavigator = () => {
 };
 
 
-export default PrideQuestStack;
+export default TimeChroniclesStack;
