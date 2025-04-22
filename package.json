@@ -17,7 +17,7 @@
     "@react-navigation/stack": "^7.2.10",
     "@reduxjs/toolkit": "^2.7.0",
     "date-fns": "^4.1.0",
-    "react": "19.1.0",
+    "react": "19.0.0",
     "react-native": "0.79.1",
     "react-native-animatable": "^1.4.0",
     "react-native-device-info": "^14.0.4",

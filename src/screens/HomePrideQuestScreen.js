@@ -106,7 +106,7 @@ const HomePrideQuestScreen = () => {
       <View style={{
         flex: 1,
         width: '100%',
-        backgroundColor: '#967228',
+        backgroundColor: '#002357',
         height: dimensions.height,
       }}>
         {selectedPrideQuestScreen === 'Home' ? (

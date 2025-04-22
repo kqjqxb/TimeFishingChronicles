@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { Image, View } from 'react-native';
+import { Image, View, ActivityIndicator } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import { useDispatch } from 'react-redux';
 import React, { useContext, useEffect, useState } from 'react';
@@ -12,21 +12,34 @@ const LoadingPrideQuestAppScreen = () => {
   const { user, setUser } = useContext(UserContext);
   const dispatch = useDispatch();
 
+  const [isCallEnOnboardingToSportVisibled, setIsCallEnOnboardingToSportVisibled] = useState(false);
+  const [initializationComplete, setInitializationComplete] = useState(false);
+
   useEffect(() => {
-    const loadPrideQuestUser = async () => {
+    const loadCallEnToSportUser = async () => {
       try {
         const deviceId = await DeviceInfo.getUniqueId();
         const storageKey = `currentUser_${deviceId}`;
-        const storedPrideQuestUser = await AsyncStorage.getItem(storageKey);
+        const storedCallEnToSportUser = await AsyncStorage.getItem(storageKey);
+        const isCallEnOnboardingWasVisibled = await AsyncStorage.getItem('isCallEnOnboardingWasVisibled');
 
-        if (storedPrideQuestUser) {
-          setUser(JSON.parse(storedPrideQuestUser || '{}'));
+        if (storedCallEnToSportUser) {
+          setUser(JSON.parse(storedCallEnToSportUser));
+          setIsCallEnOnboardingToSportVisibled(false);
+        } else if (isCallEnOnboardingWasVisibled) {
+          setIsCallEnOnboardingToSportVisibled(false);
+        } else {
+          setIsCallEnOnboardingToSportVisibled(true);
+          await AsyncStorage.setItem('isCallEnOnboardingWasVisibled', 'true');
         }
       } catch (error) {
-        console.error('Error loading DeepDive user', error);
+        console.error('Error loading of montYou Real user', error);
+      } finally {
+        setInitializationComplete(true);
       }
     };
-    loadPrideQuestUser();
+
+    loadCallEnToSportUser();
   }, [setUser]);
 
   useEffect(() => {
@@ -34,29 +47,25 @@ const LoadingPrideQuestAppScreen = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    setTimeout(() => {
-      navigation.replace('Home');
-    }, 4000);
-  }, []);
+    if (initializationComplete) {
+      const timer = setTimeout(() => {
+        const destination = isCallEnOnboardingToSportVisibled ? 'TimeChroniclesOnboarding' : 'TimeChroniclesHome';
+        navigation.replace(destination);
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [initializationComplete, isCallEnOnboardingToSportVisibled, navigation]);
 
   return (
     <View style={{
       width: '100%',
-      alignItems: 'center',
+      height: '100%',
+      backgroundColor: '#002357',
       justifyContent: 'center',
-      flex: 1,
-      zIndex: 1,
       alignSelf: 'center',
       alignItems: 'center',
-      backgroundColor: '#967228',
     }}>
-      <Image
-        source={require('../assets/images/loadingMolahImage.png')}
-        style={{
-          width: '80%',
-          height: '40%',
-        }}
-      />
+      <ActivityIndicator size="large" color="#3b8efb" />
     </View>
   );
 };
