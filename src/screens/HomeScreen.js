@@ -20,6 +20,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import PrideDetailsModalComponent from '../components/PrideDetailsModalComponent';
 import PrideGameScreen from './PrideGameScreen';
 import { BookOpenIcon, Cog8ToothIcon, HomeIcon, PuzzlePieceIcon } from 'react-native-heroicons/outline';
+import ChroniclesFactsScreen from './ChroniclesFactsScreen';
 
 const prideFontPoppinsRegular = 'Poppins-Regular';
 
@@ -129,8 +130,8 @@ const HomePrideQuestScreen = () => {
           <ChroniclesInformationScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} 
             
           />
-        ) : selectedTimeChroniclesPage === 'PrideArticles' ? (
-          <PrideArticlesScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} prideNotificationsEnabled={prideNotificationsEnabled} setPrideNotificationsEnabled={setPrideNotificationsEnabled}
+        ) : selectedTimeChroniclesPage === 'Interesting facts' ? (
+          <ChroniclesFactsScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} prideNotificationsEnabled={prideNotificationsEnabled} setPrideNotificationsEnabled={setPrideNotificationsEnabled}
           />
         ) : selectedTimeChroniclesPage === 'PrideGame' ? (
           <PrideGameScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
