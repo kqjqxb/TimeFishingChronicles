@@ -21,6 +21,7 @@ import PrideDetailsModalComponent from '../components/PrideDetailsModalComponent
 import PrideGameScreen from './PrideGameScreen';
 import { BookOpenIcon, Cog8ToothIcon, HomeIcon, PuzzlePieceIcon } from 'react-native-heroicons/outline';
 import ChroniclesFactsScreen from './ChroniclesFactsScreen';
+import ChroniclesMyCatchesScreen from './ChroniclesMyCatchesScreen';
 
 const prideFontPoppinsRegular = 'Poppins-Regular';
 
@@ -128,13 +129,11 @@ const HomePrideQuestScreen = () => {
           </SafeAreaView>
         ) : selectedTimeChroniclesPage === 'Information' ? (
           <ChroniclesInformationScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} 
-            
           />
         ) : selectedTimeChroniclesPage === 'Interesting facts' ? (
-          <ChroniclesFactsScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} prideNotificationsEnabled={prideNotificationsEnabled} setPrideNotificationsEnabled={setPrideNotificationsEnabled}
-          />
-        ) : selectedTimeChroniclesPage === 'PrideGame' ? (
-          <PrideGameScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
+          <ChroniclesFactsScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
+        ) : selectedTimeChroniclesPage === 'My catches' ? (
+          <ChroniclesMyCatchesScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
         ) : null}
 
 
