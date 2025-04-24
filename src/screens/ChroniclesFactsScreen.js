@@ -15,6 +15,7 @@ import fishesFactsData from '../components/fishesFactsData';
 
 const fontInterRegular = 'Inter-Regular';
 
+
 const ChroniclesFactsScreen = ({ setSelectedTimeChroniclesPage }) => {
     const [dimensions, setDimensions] = useState(Dimensions.get('window'));
     const [isPreviewVisibled, setIsPreviewVisibled] = useState(false);

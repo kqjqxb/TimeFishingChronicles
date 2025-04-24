@@ -7,7 +7,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { UserProvider, UserContext } from './src/context/UserContext';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
-import LoadingPrideQuestAppScreen from './src/screens/LoadingPrideQuestAppScreen';
+import ChroniclesLoadingScreen from './src/screens/ChroniclesLoadingScreen';
 import TimeChroniclesOnboardingScreen from './src/screens/TimeChroniclesOnboardingScreen';
 
 const Stack = createNativeStackNavigator();
@@ -31,7 +31,7 @@ const AppNavigator = () => {
     <NavigationContainer>
         <Stack.Navigator initialRouteName={'LoadPrideQuestScreen'}>
           <Stack.Screen name="TimeChroniclesHome" component={HomeScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="LoadPrideQuestScreen" component={LoadingPrideQuestAppScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="LoadPrideQuestScreen" component={ChroniclesLoadingScreen} options={{ headerShown: false }} />
           <Stack.Screen name="TimeChroniclesOnboarding" component={TimeChroniclesOnboardingScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
     </NavigationContainer>

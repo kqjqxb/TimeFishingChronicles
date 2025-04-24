@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { loadUserData } from '../redux/userSlice';
 import { UserContext } from '../context/UserContext';
 
-const LoadingPrideQuestAppScreen = () => {
+const ChroniclesLoadingScreen = () => {
   const navigation = useNavigation();
   const { user, setUser } = useContext(UserContext);
   const dispatch = useDispatch();
@@ -70,4 +70,4 @@ const LoadingPrideQuestAppScreen = () => {
   );
 };
 
-export default LoadingPrideQuestAppScreen;
+export default ChroniclesLoadingScreen;

@@ -13,15 +13,12 @@ import {
 } from 'react-native';
 
 import ChroniclesInformationScreen from './ChroniclesInformationScreen';
-import PrideArticlesScreen from './PrideArticlesScreen';
 
-import { ArrowLeftIcon, PlusIcon, XMarkIcon } from 'react-native-heroicons/solid';
+import { ArrowLeftIcon } from 'react-native-heroicons/solid';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import PrideDetailsModalComponent from '../components/PrideDetailsModalComponent';
-import PrideGameScreen from './PrideGameScreen';
-import { BookOpenIcon, Cog8ToothIcon, HomeIcon, PuzzlePieceIcon } from 'react-native-heroicons/outline';
 import ChroniclesFactsScreen from './ChroniclesFactsScreen';
 import ChroniclesMyCatchesScreen from './ChroniclesMyCatchesScreen';
+import ChroniclesAquariumScreen from './ChroniclesAquariumScreen';
 
 const prideFontPoppinsRegular = 'Poppins-Regular';
 
@@ -134,44 +131,9 @@ const HomePrideQuestScreen = () => {
           <ChroniclesFactsScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
         ) : selectedTimeChroniclesPage === 'My catches' ? (
           <ChroniclesMyCatchesScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
+        ) : selectedTimeChroniclesPage === 'My aquarium' ? (
+          <ChroniclesAquariumScreen setSelectedTimeChroniclesPage={setSelectedTimeChroniclesPage} />
         ) : null}
-
-
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={prideDetailsModalVisible}
-          onRequestClose={() => {
-            setPrideDetailsModalVisible(!prideDetailsModalVisible);
-          }}
-        >
-          <View style={{ flex: 1 }}>
-            <SafeAreaView style={{
-              flex: 1,
-              backgroundColor: '#967228',
-            }}>
-              <TouchableOpacity
-                onPress={() => {
-                  setPrideDetailsModalVisible(false);
-                }}
-                style={{
-                  backgroundColor: '#FFC81F',
-                  width: dimensions.width * 0.17,
-                  height: dimensions.width * 0.17,
-                  borderRadius: dimensions.width * 0.1,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'flex-start',
-                  marginLeft: dimensions.width * 0.03,
-                }}>
-                <ArrowLeftIcon size={dimensions.width * 0.09} color='white' />
-              </TouchableOpacity>
-
-              <PrideDetailsModalComponent setPrideDetailsModalVisible={setPrideDetailsModalVisible} setSelectedPride={setSelectedPride} selectedPride={selectedPride} />
-
-            </SafeAreaView>
-          </View>
-        </Modal>
       </View>
     </TouchableWithoutFeedback>
   );
