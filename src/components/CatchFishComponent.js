@@ -40,31 +40,37 @@ const CatchFishComponent = ({ setSelectedAquariumPage }) => {
     
     // Компонент для анімованої рибки
     const AnimatedFish = ({ fish, onPress }) => {
-        // Задаємо рандомний розмір рибки (30–70)
+        // Рандомний розмір рибки (30–70)
         const fishSize = useRef(30 + Math.random() * 40).current;
-        // Замінюємо контейнерну висоту на ту, що використовується для блоку з рибками
         const containerHeight = dimensions.height * 0.442;
-        // Рандомна вертикальна позиція (зберігаємо значення через useRef, щоб не змінювалось при повторних рендерах)
+        // Рандомна вертикальна позиція, що не змінюється при перерендері
         const randomTop = useRef(Math.random() * (containerHeight - fishSize)).current;
-        // Початкова позиція по горизонталі (тобто, поза лівою стороною)
+        // Початкова позиція: рибка починає поза лівою стороною
         const translateX = useRef(new Animated.Value(-fishSize)).current;
-        // Додаємо рандомну затримку та тривалість анімації
+        // Рандомна затримка перед стартом анімації
         const randomDelay = useRef(Math.random() * 5000).current;
+        // Рандомна тривалість переміщення
         const randomDuration = useRef(8000 + Math.random() * 4000).current;
-
+    
         useEffect(() => {
             Animated.loop(
                 Animated.sequence([
-                    Animated.delay(randomDelay), // затримка перед запуском анімації
+                    Animated.delay(randomDelay),
                     Animated.timing(translateX, {
-                        toValue: dimensions.width, // переміщуємо до правої сторони
+                        toValue: dimensions.width,
                         duration: randomDuration,
+                        useNativeDriver: true,
+                    }),
+                    // Миттєве повернення рибки на початок
+                    Animated.timing(translateX, {
+                        toValue: -fishSize,
+                        duration: 0,
                         useNativeDriver: true,
                     }),
                 ])
             ).start();
         }, [dimensions.width]);
-
+    
         return (
             <TouchableOpacity
                 onPress={() => onPress(fish)}
@@ -75,9 +81,9 @@ const CatchFishComponent = ({ setSelectedAquariumPage }) => {
                     style={{
                         width: fishSize,
                         height: fishSize,
-                        transform: [{ translateX }]
+                        transform: [{ translateX }],
                     }}
-                    resizeMode='contain'
+                    resizeMode="contain"
                 />
             </TouchableOpacity>
         );
