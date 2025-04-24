@@ -37,7 +37,7 @@ const CatchFishComponent = ({ setSelectedAquariumPage }) => {
     const [dimensions, setDimensions] = useState(Dimensions.get('window'));
     const styles = createChroniclesFactsStyles(dimensions);
     const [fishCaught, setFishCaught] = useState(0);
-    
+
     // Компонент для анімованої рибки
     const AnimatedFish = ({ fish, onPress }) => {
         // Рандомний розмір рибки (30–70)
@@ -51,7 +51,7 @@ const CatchFishComponent = ({ setSelectedAquariumPage }) => {
         const randomDelay = useRef(Math.random() * 5000).current;
         // Рандомна тривалість переміщення
         const randomDuration = useRef(8000 + Math.random() * 4000).current;
-    
+
         useEffect(() => {
             Animated.loop(
                 Animated.sequence([
@@ -70,7 +70,7 @@ const CatchFishComponent = ({ setSelectedAquariumPage }) => {
                 ])
             ).start();
         }, [dimensions.width]);
-    
+
         return (
             <TouchableOpacity
                 onPress={() => onPress(fish)}
